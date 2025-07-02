@@ -1,13 +1,8 @@
 {
   "productos": [
     {
-      "id": "1",
-      "nombre": "Camiseta",
-      "precio": 40000
-    },
-    {
-      "id": "2",
-      "nombre": "Zapatos",
+      "id": "33d3",
+      "nombre": "pantalon",
       "precio": 120000
     }
   ]

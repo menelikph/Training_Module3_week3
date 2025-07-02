@@ -5,15 +5,15 @@ const priceInput = document.getElementById("price");
 
 // Fetch and display products (GET)
 fetch("http://localhost:3000/productos")
-  .then(response => response.json())
-  .then(data => {
+  .then((response) => response.json())
+  .then((data) => {
     console.log("Fetched products:", data);
 
-    data.forEach(product => {
+    data.forEach((product) => {
       renderProduct(product);
     });
   })
-  .catch(error => {
+  .catch((error) => {
     console.log("An error occurred:", error);
   });
 
@@ -32,21 +32,21 @@ form.addEventListener("submit", function (event) {
 
   const newProduct = {
     nombre: nameInput.value,
-    precio: parseFloat(priceInput.value)
+    precio: parseFloat(priceInput.value),
   };
 
   fetch("http://localhost:3000/productos", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(newProduct)
+    body: JSON.stringify(newProduct),
   })
-    .then(response => response.json())
-    .then(data => {
+    .then((response) => response.json())
+    .then((data) => {
       console.log("Product added:", data);
       renderProduct(data); // Add to list without reloading
       form.reset(); // Clear form
     })
-    .catch(error => {
+    .catch((error) => {
       console.log("Error adding product:", error);
     });
 });
@@ -66,15 +66,15 @@ document.addEventListener("click", function (event) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           nombre: newName,
-          precio: parseFloat(newPrice)
-        })
+          precio: parseFloat(newPrice),
+        }),
       })
-        .then(response => response.json())
-        .then(updated => {
+        .then((response) => response.json())
+        .then((updated) => {
           console.log("Product updated:", updated);
           location.reload(); // Refresh to see changes
         })
-        .catch(error => {
+        .catch((error) => {
           console.log("Error updating product:", error);
         });
     }
@@ -82,16 +82,18 @@ document.addEventListener("click", function (event) {
 
   // Delete product (DELETE)
   if (event.target.classList.contains("delete-btn")) {
-    const confirmDelete = confirm("Are you sure you want to delete this product?");
+    const confirmDelete = confirm(
+      "Are you sure you want to delete this product?"
+    );
     if (confirmDelete) {
       fetch(`http://localhost:3000/productos/${id}`, {
-        method: "DELETE"
+        method: "DELETE",
       })
         .then(() => {
           console.log("Product deleted");
           location.reload(); // Refresh to remove from list
         })
-        .catch(error => {
+        .catch((error) => {
           console.log("Error deleting product:", error);
         });
     }

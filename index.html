@@ -2,8 +2,14 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <div id="add-product">
-      <h1>Agregar nuevo producto</h1>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>products list</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <nav id="add-product">
+      <h1>Agregar nuevo producto ✅</h1>
       <form id="product-form">
         <label for="name">Nombre:</label>
         <input type="text" id="name" required />
@@ -13,14 +19,12 @@
 
         <button type="submit">Agregar</button>
       </form>
-    </div>
+    </nav>
 
-    <title>Lista de productos</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <h1>Lista de productos</h1>
-    <ul id="product-list"></ul>
+    <div id="product-list-section">
+      <h1>Lista de productos 📋</h1>
+        <ul id="product-list"></ul>
+    </div>
 
     <script src="main.js"></script>
   </body>

@@ -8,8 +8,17 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "json-server": "^1.0.0-beta.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/menelikph/Training_Module3_week3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/menelikph/Training_Module3_week3/issues"
+  },
+  "homepage": "https://github.com/menelikph/Training_Module3_week3#readme",
+  "devDependencies": {},
+  "description": ""
 }
