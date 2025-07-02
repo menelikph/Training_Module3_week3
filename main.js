@@ -20,7 +20,7 @@ fetch("http://localhost:3000/productos")
 // Render a single product on the page
 function renderProduct(product) {
   const item = document.createElement("li");
-  item.innerHTML = `${product.nombre} - $${product.precio}
+  item.innerHTML = `✔️ ${product.nombre} - $${product.precio}
     <button data-id="${product.id}" class="edit-btn">Editar</button>
     <button data-id="${product.id}" class="delete-btn">Eliminar</button>`;
   productList.appendChild(item);
