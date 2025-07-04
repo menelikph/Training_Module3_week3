@@ -4,6 +4,11 @@
       "id": "33d3",
       "nombre": "pantalon",
       "precio": 120000
+    },
+    {
+      "id": "cb1a",
+      "nombre": "huevos",
+      "precio": 20000
     }
   ]
 }
